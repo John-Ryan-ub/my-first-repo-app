@@ -1,12 +1,17 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { KantoRegion } from "./kanto-region/kanto-region";
+import { JohtoRegion } from "./johto-region/johto-region";
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Navbar } from './navbar/navbar';
+
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [Navbar, RouterOutlet, RouterLink, RouterLinkActive],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  title = 'Hello GitHub! This is my first Angular push.';
+  title = 'gym-leaders'
+  
 }

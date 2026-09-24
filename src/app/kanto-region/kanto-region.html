@@ -1,0 +1,37 @@
+<section class="leader-section">
+  <h2>KANTO REGION</h2>
+  <div class="card-grid">
+    @for (leader of kantoLeader(); track leader.name) {
+      <div class="card">
+        <div class="leader-name">
+          <h3>{{ leader.name }}</h3>
+        </div>
+        
+        <div class="info">
+          <p><strong>Location:</strong> {{leader.location}}</p>
+          <p><strong>Badge:</strong> {{leader.badge}}</p>
+        </div>
+
+        <div class="actions">
+          <button (click)="mottoDialog.showModal()">View Motto</button>
+        </div>
+
+        <dialog #mottoDialog class="motto-modal">
+          <h3>{{ leader.name }}'s Motto</h3>
+          <p class="motto-text">"{{ leader.motto }}"</p>
+          <button (click)="mottoDialog.close()" class="close-btn">Close</button>
+        </dialog>
+
+        <div class="pokemon-team">
+          <h4>Pokémon Team</h4>
+          @for (pokemon of leader.pokemon; track pokemon.name) {
+            <div class="pokemon">
+              <span>{{ pokemon.name }}</span>
+              <span>Lv. {{ pokemon.level }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>
