@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TrainerDisplay } from './trainer-display';
+import { HoennRegion } from './hoenn-region';
 
-describe('TrainerDisplay', () => {
-  let component: TrainerDisplay;
-  let fixture: ComponentFixture<TrainerDisplay>;
+describe('HoennRegion', () => {
+  let component: HoennRegion;
+  let fixture: ComponentFixture<HoennRegion>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TrainerDisplay],
+      imports: [HoennRegion],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TrainerDisplay);
+    fixture = TestBed.createComponent(HoennRegion);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
